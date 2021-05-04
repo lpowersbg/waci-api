@@ -1,0 +1,146 @@
+ButtonGroup="main"
+    Color=Green Picture="PowerControl.bmp" 
+                    Action=[ShowNextGroup="power"]
+    Color=Off Text="" 
+                    Action=[]
+    Color=Off Text="" 
+                    Action=[]
+    Color=Green Picture="AudioControl.bmp" 
+                    Action=[ShowNextGroup="audio"]
+    Color=Off Text="" 
+                    Action=[]
+    Color=Off Text="" 
+                    Action=[]
+ButtonEndGroup
+ButtonGroup="power"
+    Color=Green Picture="AllOnP.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=RelayON&Param2=0&Param3=0&Param4=0"
+                     + ShowNextGroup="powerOn"]
+    Color=Off Text="" 
+                    Action=[]
+    Color=Off Text="" 
+                    Action=[]
+    Color=Green Picture="AllOffP.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=RelayOFF&Param2=0&Param3=0&Param4=0"
+                     + ShowNextGroup="powerOff"]
+    Color=Off Text="" 
+                    Action=[]
+    Color=Amber Picture="back.bmp" 
+                    Action=[ShowNextGroup="main"]
+ButtonEndGroup
+ButtonGroup="audio"
+    Color=Green Picture="preset1.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=Preset1&Param2=0&Param3=0&Param4=0"
+                     + ShowNextGroup="audio1"]
+    Color=Green Picture="preset3.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=Preset3&Param2=0&Param3=0&Param4=0"
+                     + ShowNextGroup="audio3"]
+    Color=Off Text="" 
+                    Action=[]
+    Color=Green Picture="preset2.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=Preset2&Param2=0&Param3=0&Param4=0"
+                     + ShowNextGroup="audio2"]
+    Color=Green Picture="preset4.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=Preset4&Param2=0&Param3=0&Param4=0"
+                     + ShowNextGroup="audio4"]
+    Color=Amber Picture="back.bmp" 
+                    Action=[ShowNextGroup="main"]
+ButtonEndGroup
+ButtonGroup="powerOn"
+    Color=Red Picture="AllOnP.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=RelayON&Param2=0&Param3=0&Param4=0"]
+    Color=Off Text="" 
+                    Action=[]
+    Color=Off Text="" 
+                    Action=[]
+    Color=Green Picture="AllOffP.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=RelayOFF&Param2=0&Param3=0&Param4=0"
+                     + ShowNextGroup="powerOff"]
+    Color=Off Text="" 
+                    Action=[]
+    Color=Amber Picture="back.bmp" 
+                    Action=[ShowNextGroup="main"]
+ButtonEndGroup
+ButtonGroup="powerOff"
+    Color=Green Picture="AllOnP.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=RelayON&Param2=0&Param3=0&Param4=0"
+                     + ShowNextGroup="powerOn"]
+    Color=Off Text="" 
+                    Action=[]
+    Color=Off Text="" 
+                    Action=[]
+    Color=Red Picture="AllOffP.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=RelayOFF&Param2=0&Param3=0&Param4=0"]
+    Color=Off Text="" 
+                    Action=[]
+    Color=Amber Picture="back.bmp" 
+                    Action=[ShowNextGroup="main"]
+ButtonEndGroup
+ButtonGroup="audio1"
+    Color=Red Picture="preset1.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=Preset1&Param2=0&Param3=0&Param4=0"]
+    Color=Green Picture="preset3.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=Preset3&Param2=0&Param3=0&Param4=0"
+                     + ShowNextGroup="audio3"]
+    Color=Off Text="" 
+                    Action=[]
+    Color=Green Picture="preset2.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=Preset2&Param2=0&Param3=0&Param4=0"
+                     + ShowNextGroup="audio2"]
+    Color=Green Picture="preset4.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=Preset4&Param2=0&Param3=0&Param4=0"
+                     + ShowNextGroup="audio4"]
+    Color=Amber Picture="back.bmp" 
+                    Action=[ShowNextGroup="main"]
+ButtonEndGroup
+ButtonGroup="audio2"
+    Color=Green Picture="preset1.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=Preset1&Param2=0&Param3=0&Param4=0"
+                     + ShowNextGroup="audio1"]
+    Color=Green Picture="preset3.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=Preset3&Param2=0&Param3=0&Param4=0"
+                     + ShowNextGroup="audio3"]
+    Color=Off Text="" 
+                    Action=[]
+    Color=Red Picture="preset2.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=Preset2&Param2=0&Param3=0&Param4=0"]
+    Color=Green Picture="preset4.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=Preset4&Param2=0&Param3=0&Param4=0"
+                     + ShowNextGroup="audio4"]
+    Color=Amber Picture="back.bmp" 
+                    Action=[ShowNextGroup="main"]
+ButtonEndGroup
+ButtonGroup="audio3"
+    Color=Green Picture="preset1.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=Preset1&Param2=0&Param3=0&Param4=0"
+                     + ShowNextGroup="audio1"]
+    Color=Red Picture="preset3.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=Preset3&Param2=0&Param3=0&Param4=0"]
+    Color=Off Text="" 
+                    Action=[]
+    Color=Green Picture="preset2.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=Preset2&Param2=0&Param3=0&Param4=0"
+                     + ShowNextGroup="audio2"]
+    Color=Green Picture="preset4.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=Preset4&Param2=0&Param3=0&Param4=0"
+                     + ShowNextGroup="audio4"]
+    Color=Amber Picture="back.bmp" 
+                    Action=[ShowNextGroup="main"]
+ButtonEndGroup
+ButtonGroup="audio4"
+    Color=Green Picture="preset1.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=Preset1&Param2=0&Param3=0&Param4=0"
+                     + ShowNextGroup="audio1"]
+    Color=Green Picture="preset3.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=Preset3&Param2=0&Param3=0&Param4=0"
+                     + ShowNextGroup="audio3"]
+    Color=Off Text="" 
+                    Action=[]
+    Color=Green Picture="preset2.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=Preset2&Param2=0&Param3=0&Param4=0"
+                     + ShowNextGroup="audio2"]
+    Color=Red Picture="preset4.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=Preset4&Param2=0&Param3=0&Param4=0"]
+    Color=Amber Picture="back.bmp" 
+                    Action=[ShowNextGroup="main"]
+ButtonEndGroup

@@ -1,0 +1,4 @@
+Place these bitmap folders in the following directory:
+C:\Program Files\Aurora Multimedia\WaciPadCreator\WPImages\
+
+Restart Waci Pad Creator, and bitmaps will be avaialble for use in WPC.
