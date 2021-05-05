@@ -39,24 +39,25 @@ def venus(ope):
 
 @app.route('/rpc/', methods=['POST'])
 def home():
-    print("success")
-    print(request.form['method'])
-    print(request.form['Param1'])
-    print(request.form['Param2'])
-    print(request.form['Param3'])
-    print(request.form['Param4'])
+    # Debug
+    # print("success")
+    # print(request.form['method'])
+    # print(request.form['Param1'])
+    # print(request.form['Param2'])
+    # print(request.form['Param3'])
+    # print(request.form['Param4'])
     if request.form['Param1'] == 'AllPowerOff':
-        print('poweroff')
+        # print('poweroff')
         poweroff()
     elif request.form['Param1'] == 'AllPowerOn':
-        print('poweron')
+        # print('poweron')
         poweron()
     elif request.form['Param1'] == 'Preset1':
-        print('venuson')
+        # print('venuson')
         if venus(status) == soff:
             venus(on)
     elif request.form['Param1'] == 'Preset5':
-        print('venusres')
+        # print('venusres')
         if venus(status) == son:
             if venus(off) == goff:
                 reply = venus(status)
@@ -64,7 +65,7 @@ def home():
                     reply = venus(status)
                 venus(on)
     elif request.form['Param1'] == 'Preset11':
-        print('venusoff')
+        # print('venusoff')
         if venus(status) == son:
             venus(off)
     return "success"
