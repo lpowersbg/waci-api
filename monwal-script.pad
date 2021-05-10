@@ -1,0 +1,26 @@
+ButtonGroup="monwal"
+    Color=Green Text="VENUS ON          " 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=VenOn&Param2=0&Param3=0&Param4=0"]
+    Color=Amber Text="VENUS REBOOT      " 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=VenRes&Param2=0&Param3=0&Param4=0"]
+    Color=Red Text="VENUS OFF         " 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=VenOff&Param2=0&Param3=0&Param4=0"]
+    Color=Off Text="" 
+                    Action=[]
+    Color=Off Text="" 
+                    Action=[]
+    Color=Off Text="" 
+                    Action=[]
+    Color=Off Text="" 
+                    Action=[]
+    Color=Off Text="" 
+                    Action=[]
+    Color=Green Picture="allon.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=MonOn&Param2=0&Param3=0&Param4=0"]
+    Color=Off Picture="Blank.bmp" 
+                    Action=[]
+    Color=Off Picture="Blank.bmp" 
+                    Action=[]
+    Color=Red Picture="alloff.bmp" 
+                    Action=[RPCSend="method=TriggerEventByName&Param1=MonOff&Param2=0&Param3=0&Param4=0"]
+ButtonEndGroup

@@ -46,17 +46,17 @@ def home():
     # print(request.form['Param2'])
     # print(request.form['Param3'])
     # print(request.form['Param4'])
-    if request.form['Param1'] == 'AllPowerOff':
+    if request.form['Param1'] == 'MonOff':
         # print('poweroff')
         poweroff()
-    elif request.form['Param1'] == 'AllPowerOn':
+    elif request.form['Param1'] == 'MonOn':
         # print('poweron')
         poweron()
-    elif request.form['Param1'] == 'Preset1':
+    elif request.form['Param1'] == 'VenOn':
         # print('venuson')
         if venus(status) == soff:
             venus(on)
-    elif request.form['Param1'] == 'Preset5':
+    elif request.form['Param1'] == 'VenRes':
         # print('venusres')
         if venus(status) == son:
             if venus(off) == goff:
@@ -64,7 +64,7 @@ def home():
                 while reply != soff:
                     reply = venus(status)
                 venus(on)
-    elif request.form['Param1'] == 'Preset11':
+    elif request.form['Param1'] == 'VenOff':
         # print('venusoff')
         if venus(status) == son:
             venus(off)
