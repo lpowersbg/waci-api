@@ -9,27 +9,29 @@ son = b'<F000068110100007a>'
 soff = b'<F0000681100000079>'
 goff = b'<F0000681000000078>'
 
-ven = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-
 def comms(comm):
+    ven = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     ven.sendto(comm, (host, port))
     return ven.recvfrom(1024)[0]
 
 def venusoff():
+    ven = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     if comms(status) == son:
         comms(off)
-    exit()
+    ven.close()
 
 def venuson():
+    ven = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     if comms(status) == soff:
         comms(on)
-    exit()
+    ven.close()
 
 def venusres():
+    ven = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     if comms(status) == son:
         if comms(off) == goff:
             reply = comms(status)
             while reply != soff:
                 reply = comms(status)
             comms(on)
-    exit()
+    ven.close()

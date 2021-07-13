@@ -1,16 +1,18 @@
-import socket
+# https://github.com/NECDisplaySolutions/necpdsdk
+# Requires this
+
+from nec_pd_sdk.nec_pd_sdk import *
 
 host = '192.168.0.1'
-port = 7142
-
-mon = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 def monoff():
-    mon.connect((host, port))
-    message = b'\x01\x30\x2A\x30\x41\x30\x43\x02\x43\x32\x30\x33\x44\x36\x30\x30\x30\x34\x03\x1D\x0D'
-    mon.send(message)
+    mon = NECPD.open(host)
+    mon.helper_set_destination_monitor_id('ALL')
+    mon.command_power_status_set(4)
+    mon.close()
 
 def monon():
-    mon.connect((host, port))
-    message = b'\x01\x30\x2A\x30\x41\x30\x43\x02\x43\x32\x30\x33\x44\x36\x30\x30\x30\x31\x03\x18\x0D'
-    mon.send(message)
+    mon = NECPD.open(host)
+    mon.helper_set_destination_monitor_id('ALL')
+    mon.command_power_status_set(1)
+    mon.close()
